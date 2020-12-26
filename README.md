@@ -17,9 +17,9 @@
  Just open the "list.csv" file and write down all cantacts that have to receive your email with their name.
  
  "Email Address","First Name"
- email1@domain.com,Name1
- email2@domani.com,Name2
- email3@domain.com,Name3
+ email1@domain.com,Name1  
+ email2@domani.com,Name2  
+ email3@domain.com,Name3  
  
  ## Write your email
  Into "Emails" folder put your email html template than put your email file name into: template = load_template('mail1') 
