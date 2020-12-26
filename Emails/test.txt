@@ -1,7 +1,0 @@
-<h1>Dear ${PERSON_NAME}, </h1>
-
-This is a test message. 
-Have a great weekend! 
-<a href="https://ketodiets360.com/custom-keto-diet-plan/">link</a>
-
-Yours Truly
