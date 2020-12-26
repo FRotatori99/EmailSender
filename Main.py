@@ -18,9 +18,13 @@ def read_list_pandas(filename):
 
 def connect_SMTP():
     server = smtplib.SMTP(host='yourDomain.com', port=587)
+    server.ehlo()
     server.starttls()
     server.login(MY_ADDRESS, MY_PASSWORD)
     return server
+
+def disconnect_SMTP(server):
+    server.quit()
 
 def send_msg(server, email, name, message_template):
     msg = MIMEMultipart()
@@ -39,3 +43,4 @@ template = load_template('mail1')
 for index, row in df.iterrows():
     print(f'Sending email to: {row["Email Address"]} - {row["First Name"]}')
     send_msg(server, row['Email Address'], row['First Name'], template)
+disconnect_SMTP(server)
